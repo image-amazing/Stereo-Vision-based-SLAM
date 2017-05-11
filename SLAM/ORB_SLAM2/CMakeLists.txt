@@ -53,12 +53,13 @@ find_package(catkin REQUIRED COMPONENTS
 
 find_package(PCL REQUIRED)
 
-# Added by Pooja ends
 
 find_package(OpenCV 3.1.0 REQUIRED)
 if(NOT OpenCV_FOUND)
 	message("OpenCV Not found!")
 endif()
+
+#To avoid build error when the OpenCV packages in ROS and ubuntu are different
 #if(NOT OpenCV_FOUND)
  #  find_package(OpenCV 2.4.3 QUIET)
   # if(NOT OpenCV_FOUND)
@@ -66,6 +67,7 @@ endif()
    #endif()
 #endif()
 
+# Added by Pooja ends
 find_package(Eigen3 3.1.0 REQUIRED)
 find_package(Pangolin REQUIRED)
 
